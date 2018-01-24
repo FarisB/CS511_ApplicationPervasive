@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="com.exercice.temperature.manager.TemperatureManagerImpl" name="TemperatureManager">
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires specification="com.exercice.temperature.interfaces.configuration.TemperatureConfiguration" field="configurationService"/>
+    <provides specifications="com.exercices.temperature.interfaces.manager.TemperatureManagerAdministration"/>
+  </component>
+  <instance component="TemperatureManager" name="TemperatureManager-1"/>
+</ipojo>
